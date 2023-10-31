@@ -28,7 +28,7 @@ const PessoaSchema = new mongoose.Schema({
 
 const Pessoa = mongoose.model("Pessoa", PessoaSchema)
 
-app.post("/cadastropessoa",async(req,res)=>{
+app.post("/cadastro",async(req,res)=>{
     const nome = req.body.nome
     const email = req.body.email
     const endereco = req.body.endereco
@@ -53,7 +53,7 @@ app.post("/cadastropessoa",async(req,res)=>{
     }
 })
 
-app.get("/", async(req,res)=>{
+app.get("/home", async(req,res)=>{
     res.sendFile(__dirname+"/index.html")
 })
 

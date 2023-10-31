@@ -1,5 +1,7 @@
 # revac
 
+Usa npm i para instalar os pacotes 
+
 comandos banco de dados:
 
 Visual studio:
