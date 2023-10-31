@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 
 const port = 3000;
 
+
 // mongo 
 mongoose.connect('mongodb://127.0.0.1:27017/revac2mia',{
     useNewUrlParser: true,
@@ -26,7 +27,6 @@ const PessoaSchema = new mongoose.Schema({
 })
 
 const Pessoa = mongoose.model("Pessoa", PessoaSchema)
-
 
 app.post("/cadastropessoa",async(req,res)=>{
     const nome = req.body.nome
@@ -53,8 +53,12 @@ app.post("/cadastropessoa",async(req,res)=>{
     }
 })
 
-app.get("/", async(req,ers)=>{
-    req.sendFile(__dirname+"/indexs.html")
+app.get("/", async(req,res)=>{
+    res.sendFile(__dirname+"/index.html")
+})
+
+app.get("/cadastro", async(req,res)=>{
+    res.sendFile(__dirname+"/cadastro.html")
 })
 
 app.listen(port, ()=>{

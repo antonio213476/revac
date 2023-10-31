@@ -2,5 +2,11 @@
 
 comandos banco de dados:
 
-show dbs
-npm i 
+Visual studio:
+- npm i 
+
+MongoDB
+- show dbs
+- use [nome da ac]
+- show collections
+- db.[ collection ].find()
